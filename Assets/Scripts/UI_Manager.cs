@@ -9,12 +9,14 @@ public class UI_Manager : MonoBehaviour
     public Slider FPS_Slider;
     public TextMeshProUGUI FPS_Counter;
 
+    //when fps slider is changed call this and update UI element and update animation delay
     public void UpdateFPSCounter(float value)
     {
         FPS_Counter.text = value.ToString();
         Animator.current.SetAnimDelay(value);
     }
 
+    //pause/continue animator, triggered by toggle box
     public void PauseAnim(bool paused)
     {
         if (paused)
@@ -27,6 +29,7 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    //function thats called by button, showed when paused is on.
     public void FramePerFrame(int d)
     {
         Animator.current.ManualAnimate(d);

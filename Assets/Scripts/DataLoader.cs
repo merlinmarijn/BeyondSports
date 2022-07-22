@@ -99,7 +99,7 @@ public class DataLoader : MonoBehaviour
 
 }
 
-
+//data structure for a single frame of data
 public class Data
 {
     public string FramePoint;
